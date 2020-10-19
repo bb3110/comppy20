@@ -1,4 +1,5 @@
-annual_rate = 4/100
+# annual_rate = 4/100
+import sys
 
 def get_monthly_rate(annual):
     """
@@ -10,5 +11,6 @@ def get_monthly_rate(annual):
     return monthly
 
 
+annual_rate = float(sys.argv[1])/100
 monthly_rate = get_monthly_rate(annual_rate)
 print("Monthly rate", round(100*monthly_rate, 2), '%')
