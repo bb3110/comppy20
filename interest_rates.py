@@ -11,7 +11,11 @@ def get_monthly_rate(annual):
     return monthly
 
 
-if __name__ == "__main__":
+def main():
     annual_rate = float(sys.argv[1])/100
     monthly_rate = get_monthly_rate(annual_rate)
     print("Monthly rate", round(100*monthly_rate, 2), '%')
+
+
+if __name__ == "__main__":
+    main()
