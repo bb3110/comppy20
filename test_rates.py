@@ -12,10 +12,8 @@ def test_monthly_0():
 def test_monthly_4():
     assert interest_rates.get_monthly_rate(0.04) ==  pytest.approx(0.0032737398)
 
-@pytest.mark.skip('failing')
 def test_payments_0():
     assert interest_rates.get_monthly_payment(50000, .0, 20) == 2500
 
-@pytest.mark.skip('failing')
 def test_payments_1():
-    assert interest_rates.get_monthly_payment(50000, .01, 20) == 2501
+    assert interest_rates.get_monthly_payment(50000, .01, 20) == 2522

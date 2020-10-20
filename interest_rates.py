@@ -39,8 +39,9 @@ def get_monthly_payment(amount, annual, months):
     """
 
     monthly = get_monthly_rate(annual)
+    denominator = sum((1 + monthly)**k for k in range(months))
 
-    return amount * (1 + monthly)**months/((1 + monthly)**months - 1) * monthly
+    return round(amount * (1 + monthly)**months/denominator)
 
 
 def main():
